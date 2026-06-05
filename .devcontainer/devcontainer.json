@@ -1,0 +1,20 @@
+{
+    "name": "Arras Headless Bot",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    "forwardPorts": [8082],
+    "portsAttributes": {
+        "8082": {
+            "label": "Bot Server",
+            "onAutoForward": "notify",
+            "visibility": "public"
+        }
+    },
+    "postCreateCommand": "npm install"
+}
